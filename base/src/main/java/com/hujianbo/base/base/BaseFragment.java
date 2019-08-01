@@ -19,12 +19,18 @@ import androidx.fragment.app.Fragment;
 import com.hujianbo.base.R;
 import com.hujianbo.base.util.LogUtils;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 
 /**
  * Created by liu on 2017/9/26.
  */
 
 public abstract class BaseFragment extends Fragment implements View.OnClickListener {
+
+    protected Unbinder mUnbinder;
+
     private View baseView;
     protected FrameLayout frameContext;
     protected FrameLayout frameError;
@@ -144,6 +150,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
                 inflater.inflate(setActionBar(), frameActionBar);
             }
             getIntentData();
+            mUnbinder = ButterKnife.bind(this,frameContext);
             initView();
         }
 
@@ -335,4 +342,10 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
             reload();
         }
     }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mUnbinder.unbind();
+    }
+
 }

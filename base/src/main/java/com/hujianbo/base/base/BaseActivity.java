@@ -26,6 +26,8 @@ import com.hujianbo.base.util.UtilIntent;
 import com.hujianbo.base.util.UtilStatusBar;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
     protected BaseActivity baseActivity;
@@ -60,10 +62,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         baseActivity = this;
         AppManager.create().addActivity(this);
         getIntentData();
-        setContentView(getlayoutResID());
     }
 
-    protected abstract int getlayoutResID();
 
     /**
      *              设置状态栏状态
@@ -146,6 +146,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
             }
 
         }
+        ButterKnife.bind(this);
         initView();
         initData();
     }

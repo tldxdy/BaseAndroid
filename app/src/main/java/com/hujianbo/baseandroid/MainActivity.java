@@ -10,25 +10,27 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.hujianbo.base.base.BaseActivity;
+import com.hujianbo.base.util.LogUtils;
 import com.hujianbo.base.util.UtilStatusBar;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 
+import butterknife.BindFloat;
+import butterknife.BindFont;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends BaseActivity {
 
+    @BindView(R.id.frames)
     FrameLayout frames;
     private FragmentTransaction fragmentTransaction;
 
 
 
     @Override
-    protected int getlayoutResID() {
-        //UtilStatusBar.setStatusBarColor(baseActivity, Color.parseColor("#ff0000"), false);
-        //UtilStatusBar.setActionBarMargin(this);
-        // 沉浸式状态栏
-        //QMUIStatusBarHelper.translucent(this);
-        //QMUIStatusBarHelper.setStatusBarLightMode(this);
-        //QMUIStatusBarHelper.setStatusBarDarkMode(this);
-        return R.layout.activity_main;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
     }
 
     @Override
@@ -38,8 +40,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setIvBackBtn(false);
-        frames = findViewById(R.id.frames);
+        //setIvBackBtn(false);
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.frames,new BlankFragment(),"测试").commit();
 
@@ -58,9 +59,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected boolean showActionBar() {
-        statusBar(false,false,Color.parseColor("#ffffff"));
+        statusBar(true,false,Color.parseColor("#ffffff"));
         //UtilStatusBar.setStatusBarColor(baseActivity, Color.parseColor("#ffffff"), false);
-        return true;
+        return false;
     }
 
 

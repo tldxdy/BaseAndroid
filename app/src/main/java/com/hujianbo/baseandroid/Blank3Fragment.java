@@ -2,20 +2,13 @@ package com.hujianbo.baseandroid;
 
 import android.graphics.Color;
 import android.view.View;
-import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.core.content.ContextCompat;
 
 import com.hujianbo.base.base.BaseFragment;
 import com.qmuiteam.qmui.layout.QMUIButton;
-import com.qmuiteam.qmui.layout.QMUILayoutHelper;
 import com.qmuiteam.qmui.util.QMUIDisplayHelper;
-import com.qmuiteam.qmui.widget.QMUIRadiusImageView;
 import com.qmuiteam.qmui.widget.QMUIRadiusImageView2;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
-import com.qmuiteam.qmui.widget.dialog.QMUIDialogAction;
 import com.qmuiteam.qmui.widget.popup.QMUIPopup;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
@@ -26,9 +19,9 @@ import butterknife.Unbinder;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
-public class BlankFragment extends BaseFragment {
+public class Blank3Fragment extends BaseFragment {
 
-    protected Unbinder mUnbinder;
+
 
     @BindView(R.id.qbtn)
     QMUIButton qbtn;
@@ -41,7 +34,7 @@ public class BlankFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        mUnbinder = ButterKnife.bind(this,frameContext);
+
         qriv.setImageResource(R.mipmap.ic_launcher);
         qriv.setCircle(true);
         qriv.setBorderWidth(10);
@@ -83,11 +76,7 @@ public class BlankFragment extends BaseFragment {
         showDataLayout();
 
     }
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        mUnbinder.unbind();
-    }
+
 
     @OnClick(R.id.qbtn)
     protected void onClick(){
