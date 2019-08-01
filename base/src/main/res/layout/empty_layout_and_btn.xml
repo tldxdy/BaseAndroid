@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dip"
+        android:src="@mipmap/empty_book" />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="暂无数据"
+        android:textColor="#999999" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/function_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:text="生成福利券"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:qmui_borderWidth="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textSize="14sp"
+        app:qmui_backgroundColor="#EF8027"
+        app:qmui_radius="23dp" />
+
+</LinearLayout>
