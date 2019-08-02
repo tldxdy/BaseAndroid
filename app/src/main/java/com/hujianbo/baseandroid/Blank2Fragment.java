@@ -1,14 +1,22 @@
 package com.hujianbo.baseandroid;
 
 import android.graphics.Color;
+import android.graphics.Point;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.hujianbo.base.base.BaseFragment;
+import com.hujianbo.base.base.BaseObserver;
+import com.hujianbo.base.model.BaseBean;
+import com.hujianbo.base.util.LogUtils;
 import com.qmuiteam.qmui.layout.QMUIButton;
 import com.qmuiteam.qmui.util.QMUIDisplayHelper;
 import com.qmuiteam.qmui.widget.QMUIRadiusImageView2;
+import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheet;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
+import com.qmuiteam.qmui.widget.popup.QMUIBasePopup;
 import com.qmuiteam.qmui.widget.popup.QMUIPopup;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
@@ -36,7 +44,7 @@ public class Blank2Fragment extends BaseFragment {
         qriv.setImageResource(R.mipmap.ic_launcher);
         qriv.setCircle(true);
         qriv.setBorderWidth(10);
-        qriv.setBorderColor(Color.parseColor("#ff00ff"));
+        qriv.setBorderColor(Color.parseColor("#ffff00"));
 
 
         //showErrorLayout();
@@ -52,15 +60,24 @@ public class Blank2Fragment extends BaseFragment {
     protected int getLayoutId() {
         return R.layout.fragment_blank;
     }
-
-    @Override
+    BaseObserver observer;
     protected boolean showActionBar() {
         return false;
     }
 
     @Override
     protected void getIntentData() {
+        observer = new BaseObserver<BaseBean<String>>(this){
+            @Override
+            public void error() {
+                super.error();
+            }
 
+            @Override
+            public void success(BaseBean<String> stringBaseBean) {
+                LogUtils.e(stringBaseBean.getData());
+            }
+        };
     }
 
     @Override
@@ -85,6 +102,10 @@ public class Blank2Fragment extends BaseFragment {
                 .addAction("确定", (dialog, index) -> {
                     dialog.dismiss();
                     showCenterToast("成功发送");
+                    BaseBean baseBean = new BaseBean<String>();
+                    baseBean.setCode(200);
+                    baseBean.setData("正常");
+                    observer.onNext(baseBean);
                 })
                 .show();
 
@@ -115,6 +136,26 @@ public class Blank2Fragment extends BaseFragment {
         mNormalPopup.setAnimStyle(QMUIPopup.ANIM_GROW_FROM_CENTER);
         mNormalPopup.setPreferredDirection(QMUIPopup.DIRECTION_TOP);
         mNormalPopup.show(view);
+    }
+
+    private void showSimpleBottomSheetGrid() {
+
+
+        new QMUIBottomSheet.BottomListSheetBuilder(mActivity)
+                .addItem(R.mipmap.ic_launcher, "分享到微信", "分享到微信")
+                .addItem(R.mipmap.ic_launcher, "分享到朋友圈", "分享到朋友圈")
+                .addItem(R.mipmap.ic_launcher, "分享到微博", "分享到微博")
+                .addItem(R.mipmap.ic_launcher, "分享到私信", "分享到私信")
+                .addItem(R.mipmap.ic_launcher, "保存到本地", "保存到本地")
+                .setOnSheetItemClickListener((dialog, itemView, position, tag) -> {
+                    dialog.dismiss();
+                }).build().show();
+
+    }
+    @Override
+    protected void onVisibleToUser() {
+        super.onVisibleToUser();
+        mActivity.statusBar(false,false, Color.parseColor("#ff0000"));
     }
 
 }

@@ -12,13 +12,13 @@ import java.util.List;
 public class BaseViewPagerAdapter extends FragmentStatePagerAdapter {
     private String[] titles;
 
-    private List<Fragment> fragmentList;
-    public BaseViewPagerAdapter(FragmentManager fm, List<Fragment> fragmentList) {
+    private List<BaseFragment> fragmentList;
+    public BaseViewPagerAdapter(FragmentManager fm, List<BaseFragment> fragmentList) {
         super(fm);
         this.fragmentList = fragmentList;
     }
 
-    public BaseViewPagerAdapter(FragmentManager fm, List<Fragment> fragmentList, String[] titles) {
+    public BaseViewPagerAdapter(FragmentManager fm, List<BaseFragment> fragmentList, String[] titles) {
         super(fm);
         this.fragmentList = fragmentList;
         this.titles = titles;

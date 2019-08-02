@@ -1,25 +1,39 @@
 package com.hujianbo.baseandroid;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
 
+import com.hujianbo.base.adapter.QMUIFragmentPagerAdapter;
 import com.hujianbo.base.base.BaseActivity;
 import com.hujianbo.base.base.BaseFragment;
+import com.hujianbo.base.base.BaseObserver;
+import com.hujianbo.base.base.BaseViewPagerAdapter;
+import com.hujianbo.base.model.BaseBean;
+import com.hujianbo.base.util.LogUtils;
 import com.qmuiteam.qmui.widget.QMUITabSegment;
 import com.qmuiteam.qmui.widget.QMUIViewPager;
+import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheet;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 
 public class ViewPagerActivity extends BaseActivity {
 
     @BindView(R.id.qviewpager)
-    QMUIViewPager mViewPager;
+    ViewPager mViewPager;
 
     @BindView(R.id.tabs)
     QMUITabSegment mTabSegment;
+
+    List<BaseFragment> baseFragments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +48,7 @@ public class ViewPagerActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
         QMUIFragmentPagerAdapter pagerAdapter = new QMUIFragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {
@@ -73,31 +88,41 @@ public class ViewPagerActivity extends BaseActivity {
             }
         };
 
-        mViewPager.setAdapter(pagerAdapter);
+        baseFragments = new ArrayList<>();
+        baseFragments.add(new Blank1Fragment());
+        baseFragments.add(new Blank2Fragment());
+        baseFragments.add(new Blank3Fragment());
+        baseFragments.add(new Blank4Fragment());
+        BaseViewPagerAdapter adapter = new BaseViewPagerAdapter(getSupportFragmentManager(),baseFragments,new String[]{"首页","新闻","通知","我的"});
+
+        mViewPager.setAdapter(adapter);
         mViewPager.setOffscreenPageLimit(4);
-        QMUITabSegment.Tab component1 = new QMUITabSegment.Tab(
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "新闻", false);
-        QMUITabSegment.Tab component2 = new QMUITabSegment.Tab(
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "新闻", false);
-        QMUITabSegment.Tab component3 = new QMUITabSegment.Tab(
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "新闻", false);
-        QMUITabSegment.Tab component4 = new QMUITabSegment.Tab(
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "新闻", false);
-
-        mTabSegment.addTab(component1);
-        mTabSegment.addTab(component2);
-        mTabSegment.addTab(component3);
-        mTabSegment.addTab(component4);
-
         mTabSegment.setupWithViewPager(mViewPager);
+//        mTabSegment.reset();
+//        mTabSegment.setHasIndicator(false);//设置是否需要显示 indicator
+//        QMUITabSegment.Tab component1 = new QMUITabSegment.Tab(
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+//                "新闻", false);
+//        QMUITabSegment.Tab component2 = new QMUITabSegment.Tab(
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+//                "新闻", false);
+//        QMUITabSegment.Tab component3 = new QMUITabSegment.Tab(
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+//                "新闻", false);
+//        QMUITabSegment.Tab component4 = new QMUITabSegment.Tab(
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+//                "新闻", false);
+//
+//        mTabSegment.addTab(component1);
+//        mTabSegment.addTab(component2);
+//        mTabSegment.addTab(component3);
+//        mTabSegment.addTab(component4);
+//        mTabSegment.notifyDataChanged();
+
     }
 
     @Override
@@ -112,7 +137,7 @@ public class ViewPagerActivity extends BaseActivity {
 
     @Override
     protected boolean showActionBar() {
-        statusBar(true,false,0);
+        statusBar(false,false, Color.parseColor("#ffffff"));
         return false;
     }
 }

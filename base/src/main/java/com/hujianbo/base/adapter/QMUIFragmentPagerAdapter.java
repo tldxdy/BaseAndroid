@@ -1,4 +1,5 @@
-package com.hujianbo.baseandroid;
+package com.hujianbo.base.adapter;
+
 
 import android.annotation.SuppressLint;
 import android.view.View;

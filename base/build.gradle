@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply from: '../config.gradle'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -49,4 +50,13 @@ dependencies {
 //    //view依赖注入
     implementation rootProject.ext.dependencies["butterknife"]
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    //网络请求
+    api rootProject.ext.dependencies["rxjava2"]
+    api rootProject.ext.dependencies["rxandroid2"]
+    api rootProject.ext.dependencies["retrofit2"]
+    api rootProject.ext.dependencies["rxbinding2"]
+    api rootProject.ext.dependencies["converter-gson"]
+    api rootProject.ext.dependencies["rxjava2-adapter"]
+    api rootProject.ext.dependencies["logging-interceptor"]
 }

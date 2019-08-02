@@ -36,7 +36,7 @@ public class Blank1Fragment extends BaseFragment {
         qriv.setImageResource(R.mipmap.ic_launcher);
         qriv.setCircle(true);
         qriv.setBorderWidth(10);
-        qriv.setBorderColor(Color.parseColor("#ff00ff"));
+        qriv.setBorderColor(Color.parseColor("#ff0000"));
 
 
         //showErrorLayout();
@@ -47,6 +47,8 @@ public class Blank1Fragment extends BaseFragment {
     protected void initData() {
 
     }
+
+
 
     @Override
     protected int getLayoutId() {
@@ -116,4 +118,9 @@ public class Blank1Fragment extends BaseFragment {
         mNormalPopup.show(view);
     }
 
+    @Override
+    protected void onVisibleToUser() {
+        super.onVisibleToUser();
+        mActivity.statusBar(false,false, Color.parseColor("#ffffff"));
+    }
 }
