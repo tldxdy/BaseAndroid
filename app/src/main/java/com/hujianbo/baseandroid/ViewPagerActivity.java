@@ -2,8 +2,6 @@ package com.hujianbo.baseandroid;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -12,13 +10,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.hujianbo.base.adapter.QMUIFragmentPagerAdapter;
 import com.hujianbo.base.base.BaseActivity;
 import com.hujianbo.base.base.BaseFragment;
-import com.hujianbo.base.base.BaseObserver;
-import com.hujianbo.base.base.BaseViewPagerAdapter;
-import com.hujianbo.base.model.BaseBean;
-import com.hujianbo.base.util.LogUtils;
+import com.hujianbo.base.adapter.BaseViewPagerAdapter;
 import com.qmuiteam.qmui.widget.QMUITabSegment;
-import com.qmuiteam.qmui.widget.QMUIViewPager;
-import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,31 +90,32 @@ public class ViewPagerActivity extends BaseActivity {
 
         mViewPager.setAdapter(adapter);
         mViewPager.setOffscreenPageLimit(4);
+        mTabSegment.setHasIndicator(true);//设置是否需要显示 indicator
         mTabSegment.setupWithViewPager(mViewPager);
-//        mTabSegment.reset();
-//        mTabSegment.setHasIndicator(false);//设置是否需要显示 indicator
-//        QMUITabSegment.Tab component1 = new QMUITabSegment.Tab(
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-//                "新闻", false);
-//        QMUITabSegment.Tab component2 = new QMUITabSegment.Tab(
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-//                "新闻", false);
-//        QMUITabSegment.Tab component3 = new QMUITabSegment.Tab(
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-//                "新闻", false);
-//        QMUITabSegment.Tab component4 = new QMUITabSegment.Tab(
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
-//                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-//                "新闻", false);
-//
-//        mTabSegment.addTab(component1);
-//        mTabSegment.addTab(component2);
-//        mTabSegment.addTab(component3);
-//        mTabSegment.addTab(component4);
-//        mTabSegment.notifyDataChanged();
+        mTabSegment.reset();
+        mTabSegment.setHasIndicator(false);//设置是否需要显示 indicator
+        QMUITabSegment.Tab component1 = new QMUITabSegment.Tab(
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+                "首页", true);
+        QMUITabSegment.Tab component2 = new QMUITabSegment.Tab(
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+                "新闻", true);
+        QMUITabSegment.Tab component3 = new QMUITabSegment.Tab(
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+                "通知", true);
+        QMUITabSegment.Tab component4 = new QMUITabSegment.Tab(
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
+                ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
+                "我的", true);
+
+        mTabSegment.addTab(component1);
+        mTabSegment.addTab(component2);
+        mTabSegment.addTab(component3);
+        mTabSegment.addTab(component4);
+        mTabSegment.notifyDataChanged();
 
     }
 

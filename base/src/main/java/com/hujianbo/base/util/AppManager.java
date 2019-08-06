@@ -14,6 +14,9 @@ public class AppManager {
     private static final AppManager sInstance = new AppManager();
 
     private AppManager() {
+        if (activityStack == null) {
+            activityStack = new Stack<>();
+        }
     }
 
     public static AppManager create() {

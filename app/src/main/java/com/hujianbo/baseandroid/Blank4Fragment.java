@@ -2,12 +2,10 @@ package com.hujianbo.baseandroid;
 
 import android.graphics.Color;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hujianbo.base.base.BaseFragment;
 import com.qmuiteam.qmui.layout.QMUIButton;
-import com.qmuiteam.qmui.util.QMUIDisplayHelper;
 import com.qmuiteam.qmui.widget.QMUIRadiusImageView2;
 import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheet;
 import com.qmuiteam.qmui.widget.dialog.QMUIDialog;
@@ -15,11 +13,7 @@ import com.qmuiteam.qmui.widget.popup.QMUIPopup;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
-
-import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class Blank4Fragment extends BaseFragment {
 
@@ -52,7 +46,7 @@ public class Blank4Fragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_blank;
+        return R.layout.fragment_blank4;
     }
 
     @Override
@@ -78,7 +72,7 @@ public class Blank4Fragment extends BaseFragment {
     }
 
     @OnClick(R.id.qbtn)
-    protected void onClick(){
+    protected void onClick() {
         new QMUIDialog.MessageDialogBuilder(getActivity())
                 .setTitle("标题")
                 .setMessage("确定要发送吗？")
@@ -86,13 +80,16 @@ public class Blank4Fragment extends BaseFragment {
                 .addAction("确定", (dialog, index) -> {
                     dialog.dismiss();
                     showCenterToast("成功发送");
+
                 })
                 .show();
 
     }
+
     private QMUIPopup mNormalPopup;
+
     @OnClick(R.id.qrbtn)
-    protected void qrbtn(View view){
+    protected void qrbtn(View view) {
         //普通浮层
         showSimpleBottomSheetGrid();
 
@@ -118,8 +115,6 @@ public class Blank4Fragment extends BaseFragment {
 //        mNormalPopup.setPreferredDirection(QMUIPopup.DIRECTION_TOP);
 //        mNormalPopup.show(view);
     }
-
-
 
 
     private void showSimpleBottomSheetGrid() {
@@ -157,9 +152,10 @@ public class Blank4Fragment extends BaseFragment {
                 })
                 .build().show();
     }
+
     @Override
     protected void onVisibleToUser() {
         super.onVisibleToUser();
-        mActivity.statusBar(false,false, Color.parseColor("#ffff00"));
+        mActivity.statusBar(false, false, Color.parseColor("#ffff00"));
     }
 }

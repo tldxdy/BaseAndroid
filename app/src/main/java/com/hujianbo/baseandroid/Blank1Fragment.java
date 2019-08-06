@@ -52,7 +52,7 @@ public class Blank1Fragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_blank;
+        return R.layout.fragment_blank1;
     }
 
     @Override

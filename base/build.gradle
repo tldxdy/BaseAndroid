@@ -59,4 +59,6 @@ dependencies {
     api rootProject.ext.dependencies["converter-gson"]
     api rootProject.ext.dependencies["rxjava2-adapter"]
     api rootProject.ext.dependencies["logging-interceptor"]
+    //刷新控件
+    api rootProject.ext.dependencies["SmartRefreshLayout"]
 }
