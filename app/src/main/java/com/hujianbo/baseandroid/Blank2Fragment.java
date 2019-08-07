@@ -62,8 +62,6 @@ public class Blank2Fragment extends BaseFragment {
         return R.layout.fragment_blank2;
     }
 
-    BaseObserver observer;
-
     protected boolean showActionBar() {
         return false;
     }
