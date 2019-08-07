@@ -31,7 +31,7 @@ public class Blank2Fragment extends BaseFragment {
     List<String> list;
     @Override
     protected void initView() {
-        LogUtils.e("initView");
+
     }
 
     @Override

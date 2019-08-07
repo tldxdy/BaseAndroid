@@ -65,7 +65,10 @@
     <last-search-timestamp>1564717731603</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b45a8903-7122-4600-a5a7-74a6fb5702e7" name="Default Changelist" comment="" />
+    <list default="true" id="b45a8903-7122-4600-a5a7-74a6fb5702e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank2Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank2Fragment.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank2Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="171">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -259,10 +262,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1032" />
-    <option name="y" value="321" />
+    <option name="x" value="901" />
     <option name="width" value="1122" />
-    <option name="height" value="1032" />
+    <option name="height" value="1106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -454,9 +456,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24413905" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24413905" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -470,7 +473,7 @@
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" weight="0.40425533" />
       <window_info anchor="bottom" id="Debug" order="4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.497979" visible="true" weight="0.3534636" />
+      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.497979" visible="true" weight="0.5026643" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5117219" side_tool="true" weight="0.42095914" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
@@ -846,8 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank2Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="171">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
