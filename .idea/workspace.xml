@@ -65,9 +65,7 @@
     <last-search-timestamp>1564717731603</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b45a8903-7122-4600-a5a7-74a6fb5702e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b45a8903-7122-4600-a5a7-74a6fb5702e7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank2Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="95">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -276,7 +274,22 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BaseAndroid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseAndroid" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="BaseAndroid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseAndroid" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -833,8 +846,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank2Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="95">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
         </state>
       </provider>
     </entry>

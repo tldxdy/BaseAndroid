@@ -9,6 +9,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.hujianbo.base.base.BaseFragment;
 import com.hujianbo.base.base.BaseObserver;
+import com.hujianbo.base.util.LogUtils;
 import com.qmuiteam.qmui.widget.pullRefreshLayout.QMUIPullRefreshLayout;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -30,7 +31,7 @@ public class Blank2Fragment extends BaseFragment {
     List<String> list;
     @Override
     protected void initView() {
-
+        LogUtils.e("initView");
     }
 
     @Override
