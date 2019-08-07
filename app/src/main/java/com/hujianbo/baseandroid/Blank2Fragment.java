@@ -26,11 +26,8 @@ public class Blank2Fragment extends BaseFragment {
     RecyclerView rvList;
     @BindView(R.id.srl_list)
     SmartRefreshLayout srl_list;
-
-
     NowAdapter adapter;
     List<String> list;
-
     @Override
     protected void initView() {
 
