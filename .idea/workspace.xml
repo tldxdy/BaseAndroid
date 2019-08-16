@@ -42,60 +42,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b45a8903-7122-4600-a5a7-74a6fb5702e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_imui_chatinput_0_10_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_47_androidx_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_6_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_7_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_6_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_7_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_6_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_7_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_6_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_7_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_chrisbanes_PhotoView_2_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_flexbox_0_2_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__jp_wasabeef_glide_transformations_3_3_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/adapter/ImagePagerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/util/GlideUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/view/ImagePager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/src/main/res/layout/activity_image_page.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/imbase.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/src/androidTest/java/com/hujianbo/imbase/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imbase/src/test/java/com/hujianbo/imbase/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseAndroid.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseAndroid.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank1Fragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank1Fragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_blank1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_blank1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base/base.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/base/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/BaseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/BaseApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/config.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,8 +132,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="142">
+              <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -305,9 +252,9 @@
         <option value="$PROJECT_DIR$/base/build.gradle" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/util/UtilGlide.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/util/GlideApp.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java" />
         <option value="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/util/GlideUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hujianbo/baseandroid/Blank1Fragment.java" />
+        <option value="$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java" />
       </list>
     </option>
   </component>
@@ -605,11 +552,11 @@
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" weight="0.40425533" />
       <window_info anchor="bottom" id="Debug" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.4907033" weight="0.42273533" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.4907033" visible="true" weight="0.22202487" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.51333874" side_tool="true" weight="0.1758437" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.4866613" visible="true" weight="0.3463588" />
+      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.4866613" weight="0.3463588" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.4995958" visible="true" weight="0.25399646" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -990,8 +937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/src/main/java/com/hujianbo/base/base/ImagePageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="142">
+          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

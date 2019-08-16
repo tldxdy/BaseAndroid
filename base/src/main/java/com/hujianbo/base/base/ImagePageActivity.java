@@ -100,7 +100,7 @@ public class ImagePageActivity extends BaseActivity {
             return;
         }
         total = imgList.size();
-        position = bundle.getInt("position",1);
+        position = bundle.getInt("position",0);
     }
 
     @Override
