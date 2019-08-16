@@ -32,5 +32,6 @@ ext {
             "logging-interceptor"    : 'com.squareup.okhttp3:logging-interceptor:3.9.1',
 //            "eventbus"         : 'org.greenrobot:eventbus:3.0.0'
             "SmartRefreshLayout"     :'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20',
+            "BaseRecyclerViewAdapterHelper"     :'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47-androidx',
     ]
 }

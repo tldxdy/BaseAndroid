@@ -41,4 +41,5 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
     implementation project(path: ':base')
+    implementation project(path: ':imbase')
 }

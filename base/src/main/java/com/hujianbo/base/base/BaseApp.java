@@ -44,12 +44,16 @@ public class BaseApp extends Application {
             }
         });
         //设置全局的Footer构建器
-        SmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
-            @Override
-            public RefreshFooter createRefreshFooter(Context context, RefreshLayout layout) {
-                //指定为经典Footer，默认是 BallPulseFooter
-                return new ClassicsFooter(context).setDrawableSize(20);
-            }
+        SmartRefreshLayout.setDefaultRefreshFooterCreator((context, layout) -> {
+            ClassicsFooter.REFRESH_FOOTER_PULLING = "上拉加载更多";//"上拉加载更多";
+            ClassicsFooter.REFRESH_FOOTER_RELEASE = "释放立即加载";//"释放立即加载";
+            ClassicsFooter.REFRESH_FOOTER_REFRESHING = "正在刷新...";//"正在刷新...";
+            ClassicsFooter.REFRESH_FOOTER_LOADING = "正在加载...";//"正在加载...";
+            ClassicsFooter.REFRESH_FOOTER_FINISH = "加载完成";//"加载完成";
+            ClassicsFooter.REFRESH_FOOTER_FAILED = "加载失败";//"加载失败";
+            ClassicsFooter.REFRESH_FOOTER_NOTHING = "没有更多数据了";//"没有更多数据了";
+            //指定为经典Footer，默认是 BallPulseFooter
+            return new ClassicsFooter(context).setDrawableSize(20);
         });
     }
 

@@ -37,7 +37,22 @@
         app:qmui_minTextSize="12dp"
         app:qmui_maxTextSize="16sp"
         android:gravity="right"
+        android:layout_weight="1"
         android:layout_height="wrap_content" />
+
+
+    <cn.jiguang.imui.chatinput.ChatInputView
+        android:id="@+id/chat_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cameraBtnIcon="@drawable/aurora_menuitem_camera"
+        app:inputCursorDrawable="@drawable/aurora_edittext_cursor_bg"
+        app:inputEditTextBg="@drawable/aurora_edittext_bg"
+        app:inputHint="aaaaa"
+        app:photoBtnIcon="@drawable/aurora_menuitem_photo"
+        app:sendBtnIcon="@drawable/aurora_menuitem_send"
+        app:voiceBtnIcon="@drawable/aurora_menuitem_mic" />
 
 
 </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
