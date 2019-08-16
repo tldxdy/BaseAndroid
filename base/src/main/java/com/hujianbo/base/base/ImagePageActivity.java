@@ -92,11 +92,13 @@ public class ImagePageActivity extends BaseActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle == null){
             showCenterToast("没有图片");
+            onBackPressed();
             return;
         }
         imgList = bundle.getStringArrayList("imgList");
         if(imgList.isEmpty()){
             showCenterToast("没有图片");
+            onBackPressed();
             return;
         }
         total = imgList.size();
