@@ -2,17 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hujianbo.baseandroid">
-
-    <!--使用蓝牙所需要的权限-->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <!--使用扫描和设置蓝牙的权限（申明这一个权限必须申明上面一个权限）-->
+    <!-- 使用蓝牙所需要的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 使用扫描和设置蓝牙的权限（申明这一个权限必须申明上面一个权限） -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
-    <uses-feature android:name="android.hardware.location.gps" />
-    <!--在 Android 6.0 及以上，还需要打开位置权限-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.location.gps" /> <!-- 在 Android 6.0 及以上，还需要打开位置权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MyApplication"
@@ -26,8 +22,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BuletoothActivity"></activity>
-        <!-- begin沉浸状态栏 -->
+        <activity android:name=".NestedScrollViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".DemoActivity"></activity>
+        <activity android:name=".BuletoothActivity" /> <!-- begin沉浸状态栏 -->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
@@ -38,15 +42,11 @@
             android:name="notch.config"
             android:value="portrait|landscape" /> <!-- begin沉浸状态栏 -->
         <activity android:name=".ViewPagerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

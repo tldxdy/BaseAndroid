@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.github.chrisbanes.photoview.PhotoView;
 import com.hujianbo.base.R;
+import com.hujianbo.base.adapter.ImagePager2Adapter;
 import com.hujianbo.base.adapter.ImagePagerAdapter;
 import com.hujianbo.base.util.GlideUtils;
 import com.hujianbo.base.view.ImagePager;
@@ -63,22 +64,28 @@ public class ImagePageActivity extends BaseActivity {
         });
         tvNum = findViewById(R.id.tv_num);
         if(imgList != null && !imgList.isEmpty()){
-            ArrayList<PhotoView> data = new ArrayList<>();
-            for (int i = 0; i < imgList.size(); i++){
-                PhotoView view = new PhotoView(baseActivity);
-                GlideUtils.loadImage(baseActivity, imgList.get(i), view);
-                data.add(view);
-            }
-            ImagePagerAdapter adapter = new ImagePagerAdapter();
-            adapter.setData(data);
+//            ArrayList<PhotoView> data = new ArrayList<>();
+//            for (int i = 0; i < imgList.size(); i++){
+//                PhotoView view = new PhotoView(baseActivity);
+//                GlideUtils.loadImage(baseActivity, imgList.get(i), view);
+//                data.add(view);
+//            }
+//            ImagePagerAdapter adapter = new ImagePagerAdapter();
+//            adapter.setData(data);
+//            mPager.setAdapter(adapter);
+//            total = data.size();
+
+            ImagePager2Adapter adapter = new ImagePager2Adapter(baseActivity,imgList);
             mPager.setAdapter(adapter);
-            total = data.size();
+            total = imgList.size();
+
             tvNum.setText((position+1)+"/" + total);
             mPager.setCurrentItem(position);
         }
         ivBack = findViewById(R.id.iv_back);
         ivBack.setColorFilter(0xffffffff);
         ivBack.setOnClickListener(this);
+        tvNum.setOnClickListener(this);
 
     }
 

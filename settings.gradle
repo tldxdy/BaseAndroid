@@ -1,1 +1,1 @@
-include ':app', ':base', ':imbase'
+include ':app', ':base', ':imbase', ':FlycoTabLayout_Lib'

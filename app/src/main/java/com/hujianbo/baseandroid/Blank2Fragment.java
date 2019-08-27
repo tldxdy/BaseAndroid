@@ -48,7 +48,7 @@ public class Blank2Fragment extends BaseFragment {
 
             }
         });
-
+        srl_list.setEnableRefresh(false);
         list = new ArrayList<>();
         adapter = new NowAdapter(mActivity,list);
         rvList.setLayoutManager(new LinearLayoutManager(mActivity));
