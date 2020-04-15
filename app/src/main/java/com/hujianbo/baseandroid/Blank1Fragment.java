@@ -112,13 +112,13 @@ public class Blank1Fragment extends BaseFragment {
         //普通浮层
 
         if (mNormalPopup == null){
-            mNormalPopup = new QMUIPopup(getContext(),QMUIPopup.DIRECTION_NONE);
-            TextView textView = new TextView(getContext());
+            mNormalPopup = new QMUIPopup(mActivity,QMUIPopup.DIRECTION_NONE);
+            TextView textView = new TextView(mActivity);
             textView.setLayoutParams(mNormalPopup.generateLayoutParam(
-                    QMUIDisplayHelper.dp2px(getContext(), 250), WRAP_CONTENT
+                    QMUIDisplayHelper.dp2px(mActivity, 250), WRAP_CONTENT
             ));
-            textView.setLineSpacing(QMUIDisplayHelper.dp2px(getContext(), 4), 1.0f);
-            int padding = QMUIDisplayHelper.dp2px(getContext(), 20);
+            textView.setLineSpacing(QMUIDisplayHelper.dp2px(mActivity, 4), 1.0f);
+            int padding = QMUIDisplayHelper.dp2px(mActivity, 20);
             textView.setPadding(padding, padding, padding, padding);
             textView.setText("目的IP： 目的端口： ");
             textView.setTextColor(0xffff0000);

@@ -129,6 +129,7 @@ public class Blank4Fragment extends BaseFragment {
                 .addItem(R.mipmap.ic_launcher, "分享到微博", TAG_SHARE_WEIBO, QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
                 .addItem(R.mipmap.ic_launcher, "分享到私信", TAG_SHARE_CHAT, QMUIBottomSheet.BottomGridSheetBuilder.FIRST_LINE)
                 .addItem(R.mipmap.ic_launcher, "保存到本地", TAG_SHARE_LOCAL, QMUIBottomSheet.BottomGridSheetBuilder.SECOND_LINE)
+                .setButtonText("关闭")
                 .setOnSheetItemClickListener((dialog, itemView) -> {
                     dialog.dismiss();
                     int tag = (int) itemView.getTag();
