@@ -67,7 +67,6 @@ public class Blank3Fragment extends BaseFragment {
         PhotoUtils.getInstance().init(mActivity,true, new PhotoUtils.OnSelectListener() {
             @Override
             public void onFinish(File outputFile, Uri outputUri) {
-                Log.e("aaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaa");
                 Glide.with(mActivity).load(outputUri).into(qriv);
             }
         });
