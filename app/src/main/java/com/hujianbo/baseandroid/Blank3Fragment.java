@@ -61,7 +61,7 @@ public class Blank3Fragment extends BaseFragment {
         qriv.setBorderWidth(10);
         qriv.setBorderColor(Color.parseColor("#ff00ff"));
 
-
+//aaaaaaaaaaaaaaaaaaaaaa
         //showErrorLayout();
 
         PhotoUtils.getInstance().init(mActivity,true, new PhotoUtils.OnSelectListener() {
