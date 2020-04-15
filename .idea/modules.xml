@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/AlivcPlayer/AlivcPlayer.iml" filepath="$PROJECT_DIR$/Aliyunplayer/AlivcPlayer/AlivcPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AliyunVideoCommon/AliyunVideoCommon.iml" filepath="$PROJECT_DIR$/AliyunVideoCommon/AliyunVideoCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/Aliyunplayer.iml" filepath="$PROJECT_DIR$/Aliyunplayer/Aliyunplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/AlivcPlayer/Aliyunplayer-AlivcPlayer.iml" filepath="$PROJECT_DIR$/Aliyunplayer/AlivcPlayer/Aliyunplayer-AlivcPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/player_demo/Aliyunplayer-player_demo.iml" filepath="$PROJECT_DIR$/Aliyunplayer/player_demo/Aliyunplayer-player_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseAndroid-master.iml" filepath="$PROJECT_DIR$/BaseAndroid-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AliyunVideoCommon/BaseAndroid-master-AliyunVideoCommon.iml" filepath="$PROJECT_DIR$/AliyunVideoCommon/BaseAndroid-master-AliyunVideoCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/BaseAndroid-master-Aliyunplayer.iml" filepath="$PROJECT_DIR$/Aliyunplayer/BaseAndroid-master-Aliyunplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/AlivcPlayer/BaseAndroid-master-Aliyunplayer-AlivcPlayer.iml" filepath="$PROJECT_DIR$/Aliyunplayer/AlivcPlayer/BaseAndroid-master-Aliyunplayer-AlivcPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/player_demo/BaseAndroid-master-Aliyunplayer-player_demo.iml" filepath="$PROJECT_DIR$/Aliyunplayer/player_demo/BaseAndroid-master-Aliyunplayer-player_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxing/BaseAndroid-master-zxing.iml" filepath="$PROJECT_DIR$/zxing/BaseAndroid-master-zxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AliyunVideoCommon/hjb1993-BaseAndroid-master-AliyunVideoCommon.iml" filepath="$PROJECT_DIR$/AliyunVideoCommon/hjb1993-BaseAndroid-master-AliyunVideoCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/hjb1993-BaseAndroid-master-Aliyunplayer.iml" filepath="$PROJECT_DIR$/Aliyunplayer/hjb1993-BaseAndroid-master-Aliyunplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxing/hjb1993-BaseAndroid-master-zxing.iml" filepath="$PROJECT_DIR$/zxing/hjb1993-BaseAndroid-master-zxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/player/player.iml" filepath="$PROJECT_DIR$/player/player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aliyunplayer/player_demo/player_demo.iml" filepath="$PROJECT_DIR$/Aliyunplayer/player_demo/player_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxing/zxing.iml" filepath="$PROJECT_DIR$/zxing/zxing.iml" />
+    </modules>
+  </component>
+</project>
