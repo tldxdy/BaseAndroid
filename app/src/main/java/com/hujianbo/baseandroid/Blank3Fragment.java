@@ -61,13 +61,11 @@ public class Blank3Fragment extends BaseFragment {
         qriv.setBorderWidth(10);
         qriv.setBorderColor(Color.parseColor("#ff00ff"));
 
-//aaaaaaaaaaaaaaaaaaaaaa
         //showErrorLayout();
 
         PhotoUtils.getInstance().init(mActivity,true, new PhotoUtils.OnSelectListener() {
             @Override
             public void onFinish(File outputFile, Uri outputUri) {
-                //asdddddddddddddddddddddddd
                 Glide.with(mActivity).load(outputUri).into(qriv);
             }
         });
@@ -150,7 +148,6 @@ public class Blank3Fragment extends BaseFragment {
 
     @OnClick(R.id.qriv)
     protected void qriv(View view){
-        Log.e("aaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaa");
         if (ContextCompat.checkSelfPermission(mActivity, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(mActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -212,12 +209,6 @@ public class Blank3Fragment extends BaseFragment {
     }
 
 
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
-    }
 
     @Override
     protected void onVisibleToUser() {

@@ -206,14 +206,17 @@ public class PhotoUtils {
                         if (mOutputUri != null) {
                             //删除拍照的临时照片
                             File tmpFile = new File(imgPath);
-                            if (tmpFile.exists())
+                            if (tmpFile.exists()) {
                                 tmpFile.delete();
+                            }
                             if (mListener != null) {
                                 mListener.onFinish(mOutputFile, mOutputUri);
                             }
                         }
                     }
                     break;
+                    default:
+                        break;
             }
         }
     }

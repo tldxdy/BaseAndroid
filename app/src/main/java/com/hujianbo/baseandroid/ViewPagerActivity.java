@@ -1,5 +1,6 @@
 package com.hujianbo.baseandroid;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -11,6 +12,7 @@ import com.hujianbo.base.adapter.QMUIFragmentPagerAdapter;
 import com.hujianbo.base.base.BaseActivity;
 import com.hujianbo.base.base.BaseFragment;
 import com.hujianbo.base.adapter.BaseViewPagerAdapter;
+import com.hujianbo.base.util.photoutils.PhotoUtils;
 import com.qmuiteam.qmui.widget.QMUITabSegment;
 
 import java.util.ArrayList;
@@ -101,19 +103,19 @@ public class ViewPagerActivity extends BaseActivity {
         QMUITabSegment.Tab component1 = new QMUITabSegment.Tab(
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "首页", true);
+                "首页", false);
         QMUITabSegment.Tab component2 = new QMUITabSegment.Tab(
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "新闻", true);
+                "新闻", false);
         QMUITabSegment.Tab component3 = new QMUITabSegment.Tab(
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "通知", true);
+                "通知", false);
         QMUITabSegment.Tab component4 = new QMUITabSegment.Tab(
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home),
                 ContextCompat.getDrawable(this, R.mipmap.icon_tabbar_home_selected),
-                "我的", true);
+                "我的", false);
 
         mTabSegment.addTab(component1);
         mTabSegment.addTab(component2);
@@ -137,5 +139,11 @@ public class ViewPagerActivity extends BaseActivity {
     protected boolean showActionBar() {
         statusBar(false,false, Color.parseColor("#ffffff"));
         return false;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
     }
 }

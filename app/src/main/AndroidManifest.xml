@@ -25,7 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="o">
         <activity android:name=".BuletoothActivity" /> <!-- begin沉浸状态栏 -->
         <meta-data
             android:name="android.max_aspect"
