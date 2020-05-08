@@ -38,12 +38,12 @@ public class UtilRetrofit {
                 if (retrofit == null) {
                     HttpLoggingInterceptor logInterceptor = new HttpLoggingInterceptor();
 
-//                    if (!BaseConfig.IS_ONLINE) {
-//                        //显示日志
-//                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-//                    } else {
-//                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
-//                    }
+                    if (!BaseConfig.IS_ONLINE) {
+                        //显示日志
+                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+                    } else {
+                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
+                    }
                     OkHttpClient client = new OkHttpClient.Builder()
                             .addInterceptor(logInterceptor)
                             .cookieJar(MyApplication.cookieJar)// 设置封装好的cookieJar
@@ -65,12 +65,12 @@ public class UtilRetrofit {
             synchronized (UtilRetrofit.class) {
                 if (cookieRetrofit == null) {
                     HttpLoggingInterceptor logInterceptor = new HttpLoggingInterceptor();
-//                    if (!BaseConfig.IS_ONLINE) {
-//                        //显示日志
-//                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-//                    } else {
-//                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
-//                    }
+                    if (!BaseConfig.IS_ONLINE) {
+                        //显示日志
+                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+                    } else {
+                        logInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
+                    }
 
                     OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new ReceivedCookiesInterceptor())
                             .addInterceptor(new AddCookiesInterceptor())

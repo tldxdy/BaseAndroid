@@ -91,7 +91,7 @@ public class Blank2Fragment extends BaseFragment {
     @Override
     protected void onLazyLoadOnce() {
         super.onLazyLoadOnce();
-        BaseObserver observer = new BaseObserver<TestBean>(this){
+        BaseObserver<TestBean> observer = new BaseObserver<TestBean>(this){
 
             @Override
             public void success(TestBean testBeanBaseBean) {
@@ -108,7 +108,7 @@ public class Blank2Fragment extends BaseFragment {
             }
         };
 
-
+        mDisposable.add(observer);
         UtilRetrofit.getInstance().create(Api.class).test().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
 
     }

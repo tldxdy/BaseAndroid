@@ -21,6 +21,7 @@ import com.hujianbo.base.util.LogUtils;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import io.reactivex.disposables.CompositeDisposable;
 
 
 /**
@@ -42,6 +43,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     private ViewStub stubError;
 
     protected boolean mIsLoadedData = false;
+    public CompositeDisposable mDisposable = new CompositeDisposable();
     /**
      * 全局的加载框对象，已经完成初始化.
      */
@@ -167,6 +169,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     @Override
     public void onDestroy() {
         super.onDestroy();
+        mDisposable.dispose();
     }
 
     /**
@@ -181,8 +184,9 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     }
 
     protected void showDataLayout() {
-        if (frameContext != null)
+        if (frameContext != null) {
             frameContext.setVisibility(View.VISIBLE);
+        }
         if (frameError != null && frameError.getVisibility() != View.GONE) {
             frameError.setVisibility(View.GONE);
         }

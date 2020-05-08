@@ -27,10 +27,13 @@ import com.hujianbo.base.util.UtilStatusBar;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 
 import butterknife.ButterKnife;
+import io.reactivex.disposables.CompositeDisposable;
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
     protected BaseActivity baseActivity;
+
+    public CompositeDisposable mDisposable = new CompositeDisposable();
 
 
     /**
@@ -417,9 +420,9 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mDisposable.dispose();
         AppManager.create().finishActivity(this);
     }
-
 
     /**
      *          消息
