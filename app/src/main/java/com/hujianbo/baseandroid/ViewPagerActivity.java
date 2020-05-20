@@ -1,13 +1,22 @@
 package com.hujianbo.baseandroid;
 
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import com.hjb1993.location.BaiDuLocation;
+import com.hjb1993.location.GaoDeLocation;
+import com.hjb1993.location.LocationCallBackListener;
+import com.hjb1993.location.LocationHelper;
+import com.hjb1993.location.LocationModel;
 import com.hujianbo.base.adapter.QMUIFragmentPagerAdapter;
 import com.hujianbo.base.base.BaseActivity;
 import com.hujianbo.base.base.BaseFragment;
@@ -127,6 +136,7 @@ public class ViewPagerActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        mLocationHelperr.startLocation();
 
     }
 
@@ -142,8 +152,42 @@ public class ViewPagerActivity extends BaseActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mLocationHelperr != null) {
+            mLocationHelperr.destroyLocation();
+        }
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
+    }
+
+    private LocationModel locationModel;
+    LocationHelper mLocationHelperr = new LocationHelper(this, new BaiDuLocation(), new LocationCallBackListener() {
+        @Override
+        public void locationSuccessful(LocationModel location) {
+            locationModel = location;
+            Log.e("aaaaaa","高德定位结果" + locationModel.getCity());
+
+        }
+
+        @Override
+        public void locationFailure(String msg) {
+            Log.e("aaaaaa",msg);
+        }
+
+        @Override
+        public void noPermissions() {
+            Log.e("aaaaaa","高德定位结果没有定位权限");
+        }
+    });
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (mLocationHelperr != null) {
+            mLocationHelperr.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 }

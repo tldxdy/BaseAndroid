@@ -18,7 +18,9 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -96,20 +98,22 @@ public class Blank2Fragment extends BaseFragment {
             @Override
             public void success(TestBean testBeanBaseBean) {
                 super.success(testBeanBaseBean);
-                Log.e("AAAAA",testBeanBaseBean.toString());
+                Log.e("AAAAA",testBeanBaseBean.getStories().size() + "aaaa");
                 list.addAll(testBeanBaseBean.getStories());
                 adapter.notifyDataSetChanged();
             }
 
             @Override
-            public void error() {
-                super.error();
+            public void error(TestBean testBean) {
                 Log.e("aaaa","错误");
             }
         };
 
         mDisposable.add(observer);
-        UtilRetrofit.getInstance().create(Api.class).test().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
+        Map<String,String> map = new HashMap<>();
+        map.put("aaa","aaaa");
+        map.put("bbbb","bbbb");
+        UtilRetrofit.getInstance().create(Api.class).test(map).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
 
     }
 

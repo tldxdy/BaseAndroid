@@ -9,10 +9,13 @@ import com.hujianbo.base.intercept.ReceivedCookiesInterceptor;
 import com.hujianbo.baseandroid.MyApplication;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -48,12 +51,13 @@ public class UtilRetrofit {
                             .addInterceptor(logInterceptor)
                             .cookieJar(MyApplication.cookieJar)// 设置封装好的cookieJar
                             .connectTimeout(CONNECT_TIME_OUT, TimeUnit.SECONDS)
-                            .readTimeout(READ_TIME_OUT, TimeUnit.SECONDS).
-                                    writeTimeout(WRITE_TIME_OUT, TimeUnit.SECONDS).build();
-                    retrofit = new Retrofit.Builder().baseUrl(BASE_URL).
-                            client(client).
-                            addConverterFactory(GsonConverterFactory.create()).
-                            addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
+                            .readTimeout(READ_TIME_OUT, TimeUnit.SECONDS)
+                            .writeTimeout(WRITE_TIME_OUT, TimeUnit.SECONDS).build();
+                    retrofit = new Retrofit.Builder()
+                            .baseUrl(BASE_URL)
+                            .client(client)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build();
                 }
             }
         }
@@ -76,9 +80,9 @@ public class UtilRetrofit {
                             .addInterceptor(new AddCookiesInterceptor())
                             .addInterceptor(logInterceptor)
                             .cookieJar(MyApplication.cookieJar)// 设置封装好的cookieJar
-                            .connectTimeout(CONNECT_TIME_OUT, TimeUnit.SECONDS).
-                                    readTimeout(READ_TIME_OUT, TimeUnit.SECONDS).
-                                    writeTimeout(WRITE_TIME_OUT, TimeUnit.SECONDS).build();
+                            .connectTimeout(CONNECT_TIME_OUT, TimeUnit.SECONDS)
+                            .readTimeout(READ_TIME_OUT, TimeUnit.SECONDS)
+                            .writeTimeout(WRITE_TIME_OUT, TimeUnit.SECONDS).build();
                     cookieRetrofit = new Retrofit.Builder().baseUrl(BASE_URL).
                             client(client).
                             addConverterFactory(GsonConverterFactory.create()).
