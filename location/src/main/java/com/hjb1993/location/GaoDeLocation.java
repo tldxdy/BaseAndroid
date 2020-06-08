@@ -42,6 +42,9 @@ public class GaoDeLocation implements LocationInterface {
             }
 
         });
+        if (null != locationClient){
+            stopLocation();
+        }
     }
 
     @Override
